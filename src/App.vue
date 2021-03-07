@@ -43,7 +43,7 @@ html {
 .bg-3d {
   position: absolute;
   z-index: 1;
-  background: url("./assets/background.png") no-repeat center center fixed;
+  background: url("./assets/background.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -101,8 +101,8 @@ html {
 /* 20:9 */
 @media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
   .undangan {
-    height: 76vh;
-    width: 100%;
+    height: 86vh;
+    width: 89%;
   }
 }
 

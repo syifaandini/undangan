@@ -10,10 +10,10 @@
         <CDminutes class="mx-auto" />
         <CDseconds class="mx-auto content-desktop" />
         <!-- <div class="col-1 content-desktop"></div> -->
-        <h5 @click="$emit('toUndangan')" alt="back" class="back mt-5">Show invitation</h5>
       </div>
-
-      
+      <h5 @click="$emit('toUndangan')" alt="back" class="back mt-5 text-center">
+        Show invitation
+      </h5>
     </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style>
-.back{
+.back {
   cursor: pointer;
   text-decoration: underline;
   letter-spacing: 1px;
