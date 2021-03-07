@@ -98,10 +98,12 @@ export default {
     /* font: normal normal bold 50px/63px; */
     font-size: 12vmin;
     height: 60px;
+    line-height: 46px;
   }
   .text-tm {
     /* font: normal normal normal 15px/20px; */
     font-size: 7vmin;
+    line-height: 8px;
   }
 }
 @media screen and (max-width: 600px) {
