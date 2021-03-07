@@ -70,7 +70,7 @@ html {
   overflow: hidden;
   width: 100vw;
   z-index: 3;
-  /* height: calc(var(--vh, 1vh) * 100); */
+  height: calc(var(--vh, 1vh) * 100);
 }
 .undangan {
   position: relative;
