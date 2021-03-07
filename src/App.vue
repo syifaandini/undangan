@@ -17,7 +17,7 @@ export default {
   components: { Countdown },
   data() {
     return {
-      countdown: false,
+      countdown: true,
     };
   },
   methods: {
