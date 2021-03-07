@@ -79,9 +79,6 @@ html {
   transform: translateY(-50%);
   height: 85vh;
   width: auto;
-  /* max-height: 100%;
-  width: auto;
-  width: auto\9; */
 }
 .btn-ok {
   background-color: #444;
@@ -113,7 +110,7 @@ html {
 /* 16:9 */
 @media only screen and (min-aspect-ratio: 9/16) and (orientation: portrait) {
   .undangan {
-    height: 76vh;
+    height: 74vh;
     width: 88%;
   }
 }
