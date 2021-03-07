@@ -32,13 +32,18 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap"); */
+
+@font-face {
+    font-family: letstrace;
+    src: url("./assets/letstrace.otf") format("opentype");
+}
 
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Red Hat Display", sans-serif !important;
+  font-family: "letstrace", sans-serif !important;
 }
 .bg-3d {
   position: absolute;

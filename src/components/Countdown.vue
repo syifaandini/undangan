@@ -55,6 +55,7 @@ export default {
   text-decoration: underline;
   letter-spacing: 1px;
   color: #998d45;
+  font-size: 36px;
 }
 .bg-tm {
   width: 135px; /*135*/
@@ -69,19 +70,22 @@ export default {
   width: 100%;
   height: 86px;
   text-align: center;
-  font: normal normal bold 65px/86px Red Hat Display;
+  font: normal normal bold 65px/86px;
+  font-family: "letstrace", sans-serif !important;
   letter-spacing: 3.25px;
   color: #ffffff;
   opacity: 1;
+  font-size: 3rem;
 }
 .text-tm {
   width: 100%;
   height: 50px;
   text-align: center;
-  font: normal normal normal 20px/26px Red Hat Display;
+  font-family: "letstrace", sans-serif !important;
   letter-spacing: 1.2px;
   color: #ffffff;
   opacity: 1;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 770px) {
@@ -187,21 +191,19 @@ div {
 
 .tittle {
   position: relative;
-  /* width: 496px;
-    height: 53px; */
   text-align: center;
-  font: normal normal bold 40px/53px Red Hat Display;
+  font-family: "letstrace", sans-serif !important;
   letter-spacing: 2.4px;
   color: #ffffff;
   opacity: 1;
+  font-size: 4rem;
 }
 
 .text {
   width: 294px;
   height: 51px;
   text-align: center;
-  width: 90%;
-  font: normal normal normal 18px/23px Red Hat Display;
+  width: 90%; 
   letter-spacing: 1.08px;
   color: #ececec;
   opacity: 1;
@@ -211,8 +213,6 @@ div {
   width: 294px;
   text-align: center;
   width: 90%;
-  font: normal normal normal 18px/23px Red Hat Display;
-
   letter-spacing: 1.08px;
   color: #ececec;
   opacity: 1;
