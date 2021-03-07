@@ -50,7 +50,7 @@ html {
   width: 100vw;
   filter: blur(3px);
   -webkit-filter: blur(3px);
-
+  height: calc(var(--vh, 1vh) * 100);
   /* height: calc(var(--vh, 1vh) * 100); */
 }
 .overlay-bg {
@@ -62,6 +62,7 @@ html {
   width: 100vw;
   filter: blur(3px);
   -webkit-filter: blur(3px);
+  height: calc(var(--vh, 1vh) * 100);
 }
 .bg-undangan {
   position: absolute;
@@ -78,6 +79,9 @@ html {
   transform: translateY(-50%);
   height: 85vh;
   width: auto;
+  /* max-height: 100%;
+  width: auto;
+  width: auto\9; */
 }
 .btn-ok {
   background-color: #444;
