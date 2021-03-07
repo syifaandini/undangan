@@ -95,11 +95,13 @@ export default {
   }
   .num-tm {
     padding-top: 7px;
-    font: normal normal bold 50px/63px Red Hat Display;
+    /* font: normal normal bold 50px/63px; */
+    font-size: 12vmin;
     height: 60px;
   }
   .text-tm {
-    font: normal normal normal 15px/20px Red Hat Display;
+    /* font: normal normal normal 15px/20px; */
+    font-size: 7vmin;
   }
 }
 @media screen and (max-width: 600px) {
@@ -110,10 +112,10 @@ export default {
   .num-tm {
     height: 55px;
     text-align: center;
-    font: normal normal bold 40px/53px Red Hat Display;
+    /* font: normal normal bold 40px/53px Red Hat Display; */
   }
   .text-tm {
-    font: normal normal normal 11px/14px Red Hat Display;
+    font: normal normal normal 11px/14px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -125,10 +127,10 @@ export default {
     padding-top: 3px;
     height: 50px;
     text-align: center;
-    font: normal normal bold 40px/53px Red Hat Display;
+    font: normal normal bold 40px/53px;
   }
   .text-tm {
-    font: normal normal normal 11px/14px Red Hat Display;
+    font: normal normal normal 11px/14px;
   }
 }
 </style>
@@ -196,7 +198,7 @@ div {
   letter-spacing: 2.4px;
   color: #ffffff;
   opacity: 1;
-  font-size: 4rem;
+  font-size: 10vmin;
 }
 
 .text {
