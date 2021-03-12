@@ -47,7 +47,7 @@ export default {
     },
   },
   created() {
-    setTimeout(() => (this.logovisible = false), 2000);
+    // setTimeout(() => (this.logovisible = false), 2000);
   },
 };
 </script>
@@ -174,6 +174,9 @@ html {
   .undangan {
     height: 86vh;
     width: 89%;
+  }
+  .logo{
+    width: 80%;
   }
 }
 
