@@ -20,7 +20,7 @@
 
     <transition name="scale">
       <div v-if="!countdown" class="bg-undangan d-flex justify-content-center">
-        <img class="undangan" src="./assets/undangan.png" alt="undangan" />
+        <img class="undangan" src="./assets/undangan.jpg" alt="undangan" />
         <b-button class="btn-ok" @click="toCD">OK</b-button>
       </div>
     </transition>
