@@ -186,7 +186,7 @@ div {
 
 .depan {
   position: absolute;
-  z-index: 1000;
+  z-index: 50;
   top: 0px;
   bottom: 0px;
   right: 0px;

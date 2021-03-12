@@ -1,12 +1,29 @@
 <template>
   <div id="app">
     <div class="bg-3d d-flex justify-content-center"></div>
+    <transition name="fade" mode="out-in">
+      <div v-show="logovisible" class="bg-logo">
+        <img class="logo" src="./assets/logo.png" alt="logo" />
+      </div>
+    </transition>
     <div class="overlay-bg"></div>
-    <Countdown v-if="countdown" @toUndangan="toUndangan" />
-    <div v-else class="bg-undangan d-flex justify-content-center">
-      <img class="undangan" src="./assets/undangan.jpeg" alt="undangan" />
-      <b-button class="btn-ok" @click="toCD">OK</b-button>
-    </div>
+    
+    <!-- <div v-if="countdown"> -->
+      <transition name="scale">
+        <!-- <div > -->
+        <div v-show="!logovisible && countdown">
+          <Countdown @toUndangan="toUndangan" />
+        </div>
+        <!-- </div> -->
+      </transition>
+    <!-- </div> -->
+
+    <transition name="scale">
+      <div v-if="!countdown" class="bg-undangan d-flex justify-content-center">
+        <img class="undangan" src="./assets/undangan.png" alt="undangan" />
+        <b-button class="btn-ok" @click="toCD">OK</b-button>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -18,6 +35,7 @@ export default {
   data() {
     return {
       countdown: true,
+      logovisible: true,
     };
   },
   methods: {
@@ -28,6 +46,9 @@ export default {
       this.countdown = false;
     },
   },
+  created() {
+    setTimeout(() => (this.logovisible = false), 2000);
+  },
 };
 </script>
 
@@ -35,8 +56,8 @@ export default {
 /* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap"); */
 
 @font-face {
-    font-family: letstrace;
-    src: url("./assets/letstrace.otf") format("opentype");
+  font-family: letstrace;
+  src: url("./assets/letstrace.otf") format("opentype");
 }
 
 body,
@@ -44,6 +65,51 @@ html {
   margin: 0;
   padding: 0;
   font-family: "letstrace", sans-serif !important;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.scale-enter-from {
+  /* opacity: 0;
+  transform: translateY(-50px) scale(0.2); */
+}
+.scale-enter-active {
+  animation: scale 0.6s ease-out;
+  /* transition: all 0.3s ease-out; */
+}
+.scale-enter-to {
+  /* opacity: 1;
+    transform: translateY(0) scale(1); */
+}
+
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.bg-logo {
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 30%;
 }
 .bg-3d {
   position: absolute;
@@ -56,7 +122,6 @@ html {
   filter: blur(3px);
   -webkit-filter: blur(3px);
   height: calc(var(--vh, 1vh) * 100);
-  /* height: calc(var(--vh, 1vh) * 100); */
 }
 .overlay-bg {
   position: absolute;
