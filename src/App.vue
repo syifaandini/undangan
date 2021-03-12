@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <div class="bg-3d d-flex justify-content-center"></div>
+    <div class="overlay-bg"></div>
+
+    <!-- <transition name="fade">
+      <div v-show="logovisible">
+        <div class="d-flex align-items-center justify-content-center">
+          <img class="logo" src="./assets/logo.png" alt="logo" />
+        </div>
+      </div>
+    </transition> -->
+
     <transition name="fade" mode="out-in">
       <div v-show="logovisible" class="bg-logo">
         <img class="logo" src="./assets/logo.png" alt="logo" />
       </div>
     </transition>
-    <div class="overlay-bg"></div>
-    
-    <!-- <div v-if="countdown"> -->
-      <transition name="scale">
-        <!-- <div > -->
-        <div v-show="!logovisible && countdown">
-          <Countdown @toUndangan="toUndangan" />
-        </div>
-        <!-- </div> -->
-      </transition>
-    <!-- </div> -->
+
+    <transition name="scale">
+      <div v-show="!logovisible && countdown">
+        <Countdown @toUndangan="toUndangan" />
+      </div>
+    </transition>
 
     <transition name="scale">
       <div v-if="!countdown" class="bg-undangan d-flex justify-content-center">
@@ -47,7 +52,7 @@ export default {
     },
   },
   created() {
-    // setTimeout(() => (this.logovisible = false), 2000);
+    setTimeout(() => (this.logovisible = false), 2000);
   },
 };
 </script>
@@ -68,7 +73,7 @@ html {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .fade-enter,
 .fade-leave-to {
@@ -109,7 +114,11 @@ html {
   align-items: center;
 }
 .logo {
+  position: absolute;
+  z-index: 5;
   width: 30%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .bg-3d {
   position: absolute;
@@ -175,7 +184,7 @@ html {
     height: 86vh;
     width: 89%;
   }
-  .logo{
+  .logo {
     width: 80%;
   }
 }
