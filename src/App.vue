@@ -1,64 +1,25 @@
 <template>
   <div id="app">
-    <div class="bg-3d d-flex justify-content-center"></div>
-    <div class="overlay-bg"></div>
-
-    <!-- <transition name="fade">
-      <div v-show="logovisible">
-        <div class="d-flex align-items-center justify-content-center">
-          <img class="logo" src="./assets/logo.png" alt="logo" />
-        </div>
-      </div>
-    </transition> -->
-
-    <transition name="fade" mode="out-in">
-      <div v-show="logovisible" class="bg-logo">
-        <img class="logo" src="./assets/logo.png" alt="logo" />
-      </div>
-    </transition>
-
-    <transition name="scale">
-      <div v-show="!logovisible && countdown">
-        <Countdown @toUndangan="toUndangan" />
-      </div>
-    </transition>
-
-    <transition name="scale">
-      <div v-if="!countdown" class="bg-undangan d-flex justify-content-center">
-        <img class="undangan" src="./assets/undangan.jpg" alt="undangan" />
-        <b-button class="btn-ok" @click="toCD">OK</b-button>
-      </div>
-    </transition>
+    <view-undangan v-if="!mulai"></view-undangan>
+    <view-acara v-else></view-acara>
   </div>
 </template>
 
 <script>
-import Countdown from "./components/Countdown.vue";
+import ViewUndangan from "./components/views/ViewUndangan";
+import ViewAcara from "./components/views/ViewAcara";
 
 export default {
-  components: { Countdown },
+  components: { ViewUndangan, ViewAcara },
   data() {
     return {
-      countdown: true,
-      logovisible: true,
-    };
-  },
-  methods: {
-    toCD() {
-      this.countdown = true;
-    },
-    toUndangan() {
-      this.countdown = false;
-    },
-  },
-  created() {
-    setTimeout(() => (this.logovisible = false), 2000);
-  },
+      mulai: true
+    }
+  }
 };
 </script>
 
 <style>
-/* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap"); */
 
 @font-face {
   font-family: letstrace;
@@ -70,130 +31,11 @@ html {
   margin: 0;
   padding: 0;
   font-family: "letstrace", sans-serif !important;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 1s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  transform: scale(0.3);
-}
-
-.scale-enter-from {
-  /* opacity: 0;
-  transform: translateY(-50px) scale(0.2); */
-}
-.scale-enter-active {
-  animation: scale 0.6s ease-out;
-  /* transition: all 0.3s ease-out; */
-}
-.scale-enter-to {
-  /* opacity: 1;
-    transform: translateY(0) scale(1); */
-}
-
-@keyframes scale {
-  from {
-    opacity: 0;
-    transform: translateY(-50px) scale(0.2);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.bg-logo {
-  position: absolute;
-  z-index: 100;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo {
-  position: absolute;
-  z-index: 5;
-  width: 30%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.bg-3d {
-  position: absolute;
-  z-index: 1;
-  background: url("./assets/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  overflow: hidden;
-  width: 100vw;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+  overflow-y: hidden;
   height: calc(var(--vh, 1vh) * 100);
 }
-.overlay-bg {
-  position: absolute;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  overflow: hidden;
-  width: 100vw;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
-  height: calc(var(--vh, 1vh) * 100);
-}
-.bg-undangan {
-  position: absolute;
-  background-color: transparent;
-  height: 100vh;
-  overflow: hidden;
-  width: 100vw;
-  z-index: 3;
-  height: calc(var(--vh, 1vh) * 100);
-}
-.undangan {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 85vh;
-  width: auto;
-}
-.btn-ok {
-  background-color: #444;
-  color: #998d45;
-  font-weight: bold;
-  position: fixed;
-  bottom: 1%;
-  border-radius: 12px;
-  width: 80px;
-  outline: none;
-  border: none;
-}
-.btn-ok:hover,
-.btn-ok:active,
-.btn-ok:focus {
-  background-color: #444;
-  outline: none;
-  box-shadow: transparent !important;
-}
 
-/* 20:9 */
-@media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
-  .undangan {
-    height: 86vh;
-    width: 89%;
-  }
-  .logo {
-    width: 80%;
-  }
-}
-
-/* 16:9 */
-@media only screen and (min-aspect-ratio: 9/16) and (orientation: portrait) {
-  .undangan {
-    height: 74vh;
-    width: 88%;
-  }
+p{
+  font-size: 1.5rem;
 }
 </style>
