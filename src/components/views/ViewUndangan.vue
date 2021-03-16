@@ -92,12 +92,14 @@ export default {
 }
 .bg-logo {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
+  top: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 .logo {
   position: absolute;

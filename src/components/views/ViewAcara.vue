@@ -1,58 +1,59 @@
 <template>
   <div>
-    <div class="content">
-      <div class="hotspot">
-        <img
-          src="../../assets/background.jpg"
-          alt="background"
-          class="image-bg"
-        />
-        <img
-          src="../../assets/interact.png"
-          alt="guest book"
-          class="interact icon1"
-          v-b-modal.tamu
-        />
-        <img
-          src="../../assets/interact.png"
-          alt="e-amplop"
-          class="interact icon2"
-          v-b-modal.amplop
-        />
-        <img
-          src="../../assets/interact.png"
-          alt="gallery"
-          class="interact icon3"
-          v-b-modal.gallery
-        />
-        <a href="https://www.google.com/" target="_blank">
-          <img
-            src="../../assets/interact.png"
-            alt="food1"
-            class="interact icon4"
-          />
-        </a>
-        <a href="https://www.google.com/" target="_blank"
-          ><img
-            src="../../assets/interact.png"
-            alt="food2"
-            class="interact icon5"
-        /></a>
+    <!-- <div class="content"> -->
+    <div class="hotspot">
+      <img
+        src="../../assets/background.jpg"
+        alt="background"
+        class="image-bg"
+      />
+      <img
+        src="../../assets/interact.png"
+        alt="guest book"
+        class="interact icon1"
+        v-b-modal.tamu
+      />
+      <img
+        src="../../assets/interact.png"
+        alt="e-amplop"
+        class="interact icon2"
+        v-b-modal.amplop
+      />
+      <img
+        src="../../assets/interact.png"
+        alt="gallery"
+        class="interact icon3"
+        v-b-modal.gallery
+      />
+      <a href="https://www.google.com/" target="_blank">
         <img
           src="../../assets/interact.png"
-          alt="live"
-          class="interact icon6"
-          v-b-modal.live
+          alt="food1"
+          class="interact icon4"
         />
-      </div>
-
-      <welcome-modal @closeModal="closeModal"></welcome-modal>
-      <tamu-modal></tamu-modal>
-      <amplop-modal></amplop-modal>
-      <live-modal></live-modal>
+      </a>
+      <a href="https://www.google.com/" target="_blank"
+        ><img
+          src="../../assets/interact.png"
+          alt="food2"
+          class="interact icon5"
+      /></a>
+      <img
+        src="../../assets/interact.png"
+        alt="live"
+        class="interact icon6"
+        v-b-modal.live
+      />
     </div>
-    <transition name="fade" mode="out-in">
-      <div v-if="logovisible" class="bg-logo">
+
+    <welcome-modal @closeModal="closeModal"></welcome-modal>
+    <tamu-modal></tamu-modal>
+    <amplop-modal></amplop-modal>
+    <live-modal></live-modal>
+
+    <!-- </div> -->
+    <transition name="fade" mode="in-out">
+      <div v-show="logovisible" class="bg-logo">
         <img class="logo" src="../../assets/logo.png" alt="logo" />
       </div>
     </transition>
@@ -70,7 +71,7 @@ export default {
   data() {
     return {
       countdown: true,
-      logovisible: false,
+      logovisible: true,
     };
   },
   methods: {
@@ -79,13 +80,20 @@ export default {
     },
   },
   mounted() {
+    console.log("hehe");
+    console.log(this.logovisible);
     setTimeout(() => {
       this.logovisible = false;
     }, 2000);
     setTimeout(() => {
       this.$bvModal.show("welcome");
-    }, 1000);
+    }, 2750);
   },
+  // created() {
+  //   setTimeout(() => {
+  //     this.logovisible = true;
+  //   }, 1000);
+  // },
 };
 </script>
 
