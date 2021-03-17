@@ -84,10 +84,10 @@ export default {
     console.log(this.logovisible);
     setTimeout(() => {
       this.logovisible = false;
-    }, 2000);
+    }, 3000);
     setTimeout(() => {
       this.$bvModal.show("welcome");
-    }, 2750);
+    }, 3750);
   },
   // created() {
   //   setTimeout(() => {
