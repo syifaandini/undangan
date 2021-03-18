@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import Countdown from '../Countdown'
+import Countdown from "../Countdown";
 export default {
   components: { Countdown },
   data() {
@@ -53,7 +53,7 @@ export default {
   created() {
     setTimeout(() => (this.logovisible = false), 2000);
   },
-}
+};
 </script>
 
 <style>
@@ -123,7 +123,7 @@ export default {
 .overlay-bg {
   position: absolute;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   overflow: hidden;
   width: 100vw;
@@ -148,8 +148,8 @@ export default {
   width: auto;
 }
 .btn-ok {
-  background-color: #444;
-  color: #998d45;
+  background-color: #87a15c;
+  color: black;
   font-weight: bold;
   position: fixed;
   bottom: 1%;
@@ -157,13 +157,16 @@ export default {
   width: 80px;
   outline: none;
   border: none;
+  height: 38px;
+  line-height: 25px;
 }
 .btn-ok:hover,
 .btn-ok:active,
 .btn-ok:focus {
-  background-color: #444;
-  outline: none;
-  box-shadow: transparent !important;
+  background-color: #87a15c !important;
+  color: black !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* 20:9 */

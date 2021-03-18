@@ -54,16 +54,17 @@ export default {
   cursor: pointer;
   text-decoration: underline;
   letter-spacing: 1px;
-  color: #998d45;
+  color: black;
   font-size: 36px;
 }
 .bg-tm {
   width: 135px; /*135*/
   height: 135px;
-  background: #998d45 0% 0% no-repeat padding-box;
+  background: #87A15C 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
   opacity: 1;
+  color: black;
 }
 .num-tm {
   padding-top: 15px;
@@ -73,7 +74,7 @@ export default {
   font: normal normal bold 65px/86px;
   font-family: "letstrace", sans-serif !important;
   letter-spacing: 3.25px;
-  color: #ffffff;
+  /* color: #ffffff; */
   opacity: 1;
   font-size: 3rem;
 }
@@ -83,7 +84,7 @@ export default {
   text-align: center;
   font-family: "letstrace", sans-serif !important;
   letter-spacing: 1.2px;
-  color: #ffffff;
+  /* color: #ffffff; */
   opacity: 1;
   font-size: 30px;
 }
@@ -155,7 +156,7 @@ div {
   top: 50%;
   transform: translateY(-50%);
   align-self: baseline;
-  background: #444 0% 0% no-repeat padding-box;
+  background: white 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 15px;
   opacity: 1;
@@ -198,7 +199,7 @@ div {
   text-align: center;
   font-family: "letstrace", sans-serif !important;
   letter-spacing: 2.4px;
-  color: #ffffff;
+  color: black;
   opacity: 1;
   font-size: 10vmin;
 }
