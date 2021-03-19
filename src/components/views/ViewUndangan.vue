@@ -64,7 +64,7 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-  transform: scale(0.3);
+  transform: scale(0.2);
 }
 
 .scale-enter-from {
@@ -72,7 +72,7 @@ export default {
   transform: translateY(-50px) scale(0.2); */
 }
 .scale-enter-active {
-  animation: scale 0.6s ease-out;
+  animation: scale 1s ease-out;
   /* transition: all 0.3s ease-out; */
 }
 .scale-enter-to {
@@ -99,7 +99,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #b9cbbb;
 }
 .logo {
   position: absolute;
@@ -148,7 +148,7 @@ export default {
   width: auto;
 }
 .btn-ok {
-  background-color: #87a15c;
+  background-color: #b9cbbb;
   color: black;
   font-weight: bold;
   position: fixed;
@@ -163,7 +163,7 @@ export default {
 .btn-ok:hover,
 .btn-ok:active,
 .btn-ok:focus {
-  background-color: #87a15c !important;
+  background-color: #b9cbbb !important;
   color: black !important;
   outline: none !important;
   box-shadow: none !important;

@@ -60,7 +60,7 @@ export default {
 .bg-tm {
   width: 135px; /*135*/
   height: 135px;
-  background: #87A15C 0% 0% no-repeat padding-box;
+  background: white 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
   opacity: 1;
@@ -156,7 +156,7 @@ div {
   top: 50%;
   transform: translateY(-50%);
   align-self: baseline;
-  background: white 0% 0% no-repeat padding-box;
+  background: #b9cbbb 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 15px;
   opacity: 1;
