@@ -130,7 +130,10 @@ export default {
     },
     opentamu() {
       this.$bvModal.show("tamu");
-
+      // var modal = document.getElementById("#tamu")
+      // modal.onclick = function () {
+      //   document.modal.off("resize");
+      // }
       var getData = {
         method: "get",
         url: "https://weddingdev.arthatronic.com/api/users",
@@ -150,8 +153,8 @@ export default {
         url: "https://weddingdev.arthatronic.com/api/users/ucapan",
       };
       axios(postData)
-        .then((response) => {
-          console.log(response);
+        .then(() => {
+          // console.log(response);
 
           var getData = {
             method: "get",
