@@ -45,10 +45,10 @@
         <img src="../../assets/photos/2.jpeg" alt="foto" v-b-modal.image2 />
         <img src="../../assets/photos/3.jpeg" alt="foto" v-b-modal.image3 />
         <img src="../../assets/photos/4.jpeg" alt="foto" v-b-modal.image4 />
-        <img src="../../assets/photos/5.jpeg" alt="foto" v-b-modal.image2 />
-        <img src="../../assets/photos/6.jpeg" alt="foto" v-b-modal.image3 />
-        <img src="../../assets/photos/7.jpeg" alt="foto" v-b-modal.image4 />
-        <img src="../../assets/photos/8.jpeg" alt="foto" v-b-modal.image2 />
+        <img src="../../assets/photos/5.jpeg" alt="foto" v-b-modal.image5 />
+        <img src="../../assets/photos/6.jpeg" alt="foto" v-b-modal.image6 />
+        <img src="../../assets/photos/7.jpeg" alt="foto" v-b-modal.image7 />
+        <img src="../../assets/photos/8.jpeg" alt="foto" v-b-modal.image8 />
       </section>
 
       <image-modal idModal="image1">
@@ -62,6 +62,18 @@
       </image-modal>
       <image-modal idModal="image4">
         <img src="../../assets/photos/4.jpeg" style="width: 100%" />
+      </image-modal>
+      <image-modal idModal="image5">
+        <img src="../../assets/photos/5.jpeg" style="width: 100%" />
+      </image-modal>
+      <image-modal idModal="image6">
+        <img src="../../assets/photos/6.jpeg" style="width: 100%" />
+      </image-modal>
+      <image-modal idModal="image7">
+        <img src="../../assets/photos/7.jpeg" style="width: 100%" />
+      </image-modal>
+      <image-modal idModal="image8">
+        <img src="../../assets/photos/8.jpeg" style="width: 100%" />
       </image-modal>
       <!-- <b-row>
         <b-col cols="12" md="6">

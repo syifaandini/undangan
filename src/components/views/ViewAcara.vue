@@ -30,8 +30,8 @@
         target="_blank"
       >
         <img
-          src="../../assets/icon/flyn.png"
-          alt="flyn freshener"
+          src="../../assets/icon/bodymist.png"
+          alt="bodymist"
           class="interact icon4"
         />
       </a>
