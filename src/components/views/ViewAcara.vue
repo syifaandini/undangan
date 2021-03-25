@@ -32,10 +32,10 @@
           class="interact icon4"
         />
       </a>
-      <a href="https://www.google.com/" target="_blank"
+      <a href="http://arthatronic.com/" target="_blank"
         ><img
           src="../../assets/interact.png"
-          alt="food2"
+          alt="arthatronic"
           class="interact icon5"
       /></a>
       <img
@@ -44,12 +44,25 @@
         class="interact icon6"
         v-b-modal.live
       />
+      <a href="https://www.google.com/" target="_blank"
+        ><img
+          src="../../assets/interact.png"
+          alt="food3"
+          class="interact icon7"
+      /></a>
+      <a href="https://www.google.com/" target="_blank"
+        ><img
+          src="../../assets/interact.png"
+          alt="demie"
+          class="interact icon8"
+      /></a>
     </div>
 
     <welcome-modal @closeModal="closeModal"></welcome-modal>
     <tamu-modal></tamu-modal>
     <amplop-modal></amplop-modal>
     <live-modal></live-modal>
+    <gallery-modal></gallery-modal>
 
     <!-- </div> -->
     <transition name="fade" mode="in-out">
@@ -62,12 +75,13 @@
 
 <script>
 import AmplopModal from "../modal/AmplopModal.vue";
+import GalleryModal from '../modal/GalleryModal.vue';
 import LiveModal from "../modal/LiveModal.vue";
 import TamuModal from "../modal/TamuModal.vue";
 import WelcomeModal from "../modal/WelcomeModal.vue";
 
 export default {
-  components: { WelcomeModal, TamuModal, AmplopModal, LiveModal },
+  components: { WelcomeModal, TamuModal, AmplopModal, LiveModal, GalleryModal },
   data() {
     return {
       countdown: true,
@@ -110,8 +124,10 @@ export default {
 }
 
 .hotspot {
-  background: url(/img/background.bbaa5595.jpg);
+  /* background: url(/img/background.bbaa5595.jpg); */
+
   /* background-size: cover; */
+  background: url("../../assets/background.jpg");
   background-size: auto 116%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -136,28 +152,36 @@ export default {
   outline: none;
 }
 .icon1 {
-  top: 62%;
-  left: 14%;
+  top: 47%;
+  left: 10%;
 }
 .icon2 {
-  top: 52%;
-  left: 23%;
+  top: 45%;
+  left: 19%;
 }
 .icon3 {
-  top: 28%;
-  left: 17%;
+  top: 26%;
+  left: 13%;
 }
 .icon4 {
-  top: 69%;
-  left: 38%;
+  top: 66%;
+  left: 35%;
 }
 .icon5 {
-  top: 69%;
+  top: 79%;
   left: 57%;
 }
 .icon6 {
-  top: 37%;
-  right: 20%;
+  top: 22%;
+  right: 25%;
+}
+.icon7 {
+  top: 69%;
+  right: 48%;
+}
+.icon8 {
+  top: 73%;
+  right: 70%;
 }
 
 @media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {

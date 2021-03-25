@@ -13,7 +13,7 @@ export default {
   components: { ViewUndangan, ViewAcara },
   data() {
     return {
-      mulai: false
+      mulai: true
     }
   }
 };
