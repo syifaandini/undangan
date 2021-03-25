@@ -24,7 +24,7 @@
               <b-form-input
                 id="input-1"
                 v-model="form.email"
-                type="text"
+                type="email"
                 placeholder="Enter your email"
                 required
               ></b-form-input>
