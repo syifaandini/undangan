@@ -8,7 +8,7 @@
         class="image-bg"
       />
       <img
-        src="../../assets/interact.png"
+        src="../../assets/message.png"
         alt="guest book"
         class="interact icon1"
         v-b-modal.tamu

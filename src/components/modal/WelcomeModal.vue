@@ -30,9 +30,19 @@ export default {
   line-height: 30px;
 }
 .ok-welcome {
-  margin: 0 auto;
-  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  letter-spacing: 0.8px;
+  width: 80%;
   display: block;
+  margin: 0 auto;
+  background-color: #3f5333;
+}
+.ok-welcome:focus, .ok-welcome:active {
+  background-color: #3f5333 !important;
+  box-shadow: 0px 3px 6px #00000029;
+  outline: none;
 }
 </style>
 

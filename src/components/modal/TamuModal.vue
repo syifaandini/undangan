@@ -48,7 +48,7 @@
               <b-button
                 type="submit"
                 block
-                class="mt-4 btn-auth btn-auth-primary"
+                class="mt-4 btn-auth btn-auth-primary submit-message"
                 >Submit</b-button
               >
             </div>
@@ -93,5 +93,23 @@ label,
     max-width: 98vw;
     max-height: 63vh;
   }
+}
+</style>
+
+<style scoped>
+.submit-message {
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  letter-spacing: 0.8px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: #3f5333;
+}
+.submit-message:focus, .submit-message:active {
+  background-color: #3f5333 !important;
+  box-shadow: 0px 3px 6px #00000029;
+  outline: none;
 }
 </style>
