@@ -1,13 +1,8 @@
 <template>
-  <!-- <div>
-    <div id="loading" class="loader">
-      <img src="loading.svg" alt="loading" />
-    </div> -->
-    <div id="app">
-      <view-undangan v-if="!mulai"></view-undangan>
-      <view-acara v-else></view-acara>
-    </div>
-  <!-- </div> -->
+  <div>
+    <view-undangan v-if="!mulai"></view-undangan>
+    <view-acara v-else></view-acara>
+  </div>
 </template>
 
 <script>
