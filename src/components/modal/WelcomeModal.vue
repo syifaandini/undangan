@@ -63,5 +63,8 @@ export default {
     #welcome___BV_modal_content_.modal-content.basemodal__content {
     width: 94vmin;
   }
+  .title-welcome{
+    line-height: 34px;
+  }
 }
 </style>

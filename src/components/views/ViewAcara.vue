@@ -25,10 +25,10 @@
         class="interact icon3"
         v-b-modal.gallery
       />
-      <a href="https://www.google.com/" target="_blank">
+      <a href="https://www.instagram.com/p/CHhlSvZDDY4/?igshid=1pg0humv5l4xn" target="_blank">
         <img
-          src="../../assets/interact.png"
-          alt="food1"
+          src="../../assets/icon/flyn.png"
+          alt="flyn freshener"
           class="interact icon4"
         />
       </a>
@@ -47,7 +47,7 @@
       <a href="https://instagram.com/metronomdj" target="_blank"
         ><img
           src="../../assets/icon/metronomdj.png"
-          alt="food3"
+          alt="metronomdj"
           class="interact icon7"
       /></a>
       <a href="https://instagram.com/demiebakmi" target="_blank"

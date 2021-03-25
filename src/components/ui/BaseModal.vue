@@ -62,7 +62,7 @@ export default {
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 15px;
   width: 60vw;
-  max-height: 90vh;
+  max-height: 98vh;
 }
 .btn {
   font-size: 1.5rem;
