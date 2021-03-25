@@ -2,10 +2,8 @@
   <base-modal :idModal="'amplop'">
     <template>
       <h1 class="title-modal text-center mb-0">E-Amplop</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nulla,
-        illo dolorum quibusdam est in quae delectus dolorem voluptatem
-        blanditiis
+      <p class="text-center">
+        Although you aren’t present at the wedding location, you can also send some loves for Dana & Trisa, digitally.
       </p>
       <b-row>
         <b-col cols="12" md="6">
@@ -43,7 +41,7 @@ export default {
   data() {
     return {
       bca: "6800604883",
-      gopay: "0813"
+      gopay: "729972378978"
     };
   },
   methods: {

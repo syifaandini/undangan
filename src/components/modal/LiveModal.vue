@@ -2,10 +2,8 @@
   <base-modal :idModal="'live'">
     <template>
       <h1 class="title-modal text-center mb-0">Live Akad</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nulla,
-        illo dolorum quibusdam est in quae delectus dolorem voluptatem
-        blanditiis
+      <p class="text-center">
+        You can watch what is happening in the wedding of Dana & Trisa here, LIVE.
       </p>
       <b-row>
         <b-col cols="12" md="6">
