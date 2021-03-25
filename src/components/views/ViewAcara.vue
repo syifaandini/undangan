@@ -8,19 +8,19 @@
         class="image-bg"
       />
       <img
-        src="../../assets/message.png"
+        src="../../assets/guestbook.png"
         alt="guest book"
         class="interact icon1"
         v-b-modal.tamu
       />
       <img
-        src="../../assets/interact.png"
+        src="../../assets/amplop.png"
         alt="e-amplop"
         class="interact icon2"
         v-b-modal.amplop
       />
       <img
-        src="../../assets/interact.png"
+        src="../../assets/photos.png"
         alt="gallery"
         class="interact icon3"
         v-b-modal.gallery
@@ -39,7 +39,7 @@
           class="interact icon5"
       /></a>
       <img
-        src="../../assets/interact.png"
+        src="../../assets/liveicon.png"
         alt="live"
         class="interact icon6"
         v-b-modal.live
@@ -112,6 +112,15 @@ export default {
 </script>
 
 <style>
+.interact{
+  animation: blinker 1s ease-in-out infinite alternate;
+}
+
+@keyframes blinker {
+  100% {
+    transform: scale(0.7);
+  }
+}
 .bg-3d-acara {
   position: absolute;
   z-index: 1;
@@ -146,19 +155,18 @@ export default {
 .interact {
   position: absolute;
   z-index: 10;
-  width: 4%;
+  width: 5%;
 }
 .interact:focus {
   outline: none;
 }
 .icon1 {
-  top: 45%;
-  left: 9%;
-  width: 5%;
+  top: 43%;
+  left: 8%;
 }
 .icon2 {
-  top: 45%;
-  left: 19%;
+  top: 37%;
+  left: 22%;
 }
 .icon3 {
   top: 26%;
@@ -173,8 +181,8 @@ export default {
   left: 57%;
 }
 .icon6 {
-  top: 22%;
-  right: 25%;
+  top: 21%;
+  right: 24%;
 }
 .icon7 {
   top: 69%;
