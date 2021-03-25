@@ -75,7 +75,7 @@
 
 <script>
 import AmplopModal from "../modal/AmplopModal.vue";
-import GalleryModal from '../modal/GalleryModal.vue';
+import GalleryModal from "../modal/GalleryModal.vue";
 import LiveModal from "../modal/LiveModal.vue";
 import TamuModal from "../modal/TamuModal.vue";
 import WelcomeModal from "../modal/WelcomeModal.vue";
@@ -152,8 +152,9 @@ export default {
   outline: none;
 }
 .icon1 {
-  top: 47%;
-  left: 10%;
+  top: 45%;
+  left: 9%;
+  width: 5%;
 }
 .icon2 {
   top: 45%;
