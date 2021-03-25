@@ -85,19 +85,19 @@ export default {
       messages: [
         {
           id: 1,
-          name: "Andin",
+          name: "Nama",
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
         },
         {
           id: 2,
-          name: "Andin2",
+          name: "Nama2",
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
         },
         {
           id: 3,
-          name: "Andin3",
+          name: "Nama3",
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
         },

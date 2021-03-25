@@ -9,26 +9,26 @@
       </p>
       <b-row>
         <b-col cols="12" md="6">
-          <a href="https://instagram.com/">
+          <a href="https://instagram.com/kyriz_boogieman" target="_blank">
             <div class="instagram-wrapper">
               <img
                 src="../../assets/instagram.svg"
                 alt="instagram"
                 class="instagram-icon"
               />
-              <p class="instagram-user">@usernameig</p>
+              <p class="instagram-user">@kyriz_boogieman</p>
             </div>
           </a>
         </b-col>
         <b-col cols="12" md="6">
-          <a href="https://instagram.com/">
+          <a href="https://instagram.com/fangtatis" target="_blank">
             <div class="instagram-wrapper">
               <img
                 src="../../assets/instagram.svg"
                 alt="instagram"
                 class="instagram-icon"
               />
-              <p class="instagram-user">@usernameig</p>
+              <p class="instagram-user">@fangtatis</p>
             </div>
           </a>
         </b-col>

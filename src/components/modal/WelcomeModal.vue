@@ -1,12 +1,14 @@
 <template>
   <base-modal :idModal="'welcome'">
     <template>
-      <h1 class="title-welcome text-center">Welcome</h1>
+      <p class="title-welcome text-center">
+        Welcome to Trisa and Dana Virtual Wedding Venue
+      </p>
       <p class="text-welcome">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-        laboriosam enim sapiente odit dolorem eligendi blanditiis tenetur
-        inventore adipisci quasi aliquam doloremque rem mollitia, debitis hic
-        cupiditate consectetur optio totam?
+        You can drag your screen to look around the venue <br /><br />
+        Click on the points of interest to interact with the venue <br /><br />
+        You can watch the wedding live at the ”live” point of interest on the
+        right side <br />
       </p>
       <b-button @click="$emit('closeModal')" class="ok-welcome">OK</b-button>
     </template>
@@ -22,10 +24,11 @@ export default {
 
 <style scoped>
 .title-welcome {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
+  font-weight: bolder;
 }
 .text-welcome {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   line-height: 30px;
 }
@@ -39,7 +42,8 @@ export default {
   margin: 0 auto;
   background-color: #3f5333;
 }
-.ok-welcome:focus, .ok-welcome:active {
+.ok-welcome:focus,
+.ok-welcome:active {
   background-color: #3f5333 !important;
   box-shadow: 0px 3px 6px #00000029;
   outline: none;
@@ -52,7 +56,7 @@ export default {
 }
 .modal-dialog-scrollable
   #welcome___BV_modal_content_.modal-content.basemodal__content {
-  width: 50vh;
+  width: 60vh;
 }
 @media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
   .modal-dialog-scrollable

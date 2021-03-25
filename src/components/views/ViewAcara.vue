@@ -8,19 +8,19 @@
         class="image-bg"
       />
       <img
-        src="../../assets/guestbook.png"
+        src="../../assets/icon/guestbook.png"
         alt="guest book"
         class="interact icon1"
         v-b-modal.tamu
       />
       <img
-        src="../../assets/amplop.png"
+        src="../../assets/icon/amplop.png"
         alt="e-amplop"
         class="interact icon2"
         v-b-modal.amplop
       />
       <img
-        src="../../assets/photos.png"
+        src="../../assets/icon/photos.png"
         alt="gallery"
         class="interact icon3"
         v-b-modal.gallery
@@ -32,27 +32,27 @@
           class="interact icon4"
         />
       </a>
-      <a href="http://arthatronic.com/" target="_blank"
+      <a href="https://instagram.com/arthatronicstudio" target="_blank"
         ><img
-          src="../../assets/interact.png"
+          src="../../assets/icon/artha.png"
           alt="arthatronic"
           class="interact icon5"
       /></a>
       <img
-        src="../../assets/liveicon.png"
+        src="../../assets/icon/liveicon.png"
         alt="live"
         class="interact icon6"
         v-b-modal.live
       />
-      <a href="https://www.google.com/" target="_blank"
+      <a href="https://instagram.com/metronomdj" target="_blank"
         ><img
-          src="../../assets/interact.png"
+          src="../../assets/icon/metronomdj.png"
           alt="food3"
           class="interact icon7"
       /></a>
-      <a href="https://www.google.com/" target="_blank"
+      <a href="https://instagram.com/demiebakmi" target="_blank"
         ><img
-          src="../../assets/interact.png"
+          src="../../assets/icon/demie.png"
           alt="demie"
           class="interact icon8"
       /></a>
