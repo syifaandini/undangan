@@ -63,7 +63,7 @@ export default {
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 15px;
   width: 60vw;
-  max-height: 98vh;
+  max-height: 90vh;
 }
 .btn {
   font-size: 1.5rem;
@@ -99,6 +99,7 @@ export default {
 @media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
   .modal-dialog-scrollable .modal-content.basemodal__content {
     width: 94vmin;
+    max-height: 88vh;
   }
   .close__basemodal {
     top: 2%;

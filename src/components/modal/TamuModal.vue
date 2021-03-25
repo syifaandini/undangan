@@ -7,7 +7,7 @@
         be glad to hear from you.
       </p>
       <b-row>
-        <b-col cols="12" md="6">
+        <b-col cols="12" md="6" class="form-wrapper">
           <b-form ref="form" @submit.stop.prevent="handleSubmit" class="mt-3">
             <b-form-group label="Name" label-for="input-1">
               <b-form-input
@@ -84,22 +84,28 @@ export default {
       this.$emit("submitData", data);
     },
     cleardata() {
-      this.form.name = ""
-      this.form.email = ""
-      this.form.message = ""
-    }
+      this.form.name = "";
+      this.form.email = "";
+      this.form.message = "";
+    },
   },
 };
 </script>
 
 <style>
+.form-wrapper {
+  min-width: 50%;
+}
 label,
 .form-control {
   font-size: 1.5rem;
 }
 @media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
   #tamu .modal-dialog-scrollable .modal-content.basemodal__content {
-    min-width: 94vw;
+    width: 94vw;
+  }
+  .form-wrapper {
+    min-width: 100%;
   }
 }
 /* Portrait Ipad */
