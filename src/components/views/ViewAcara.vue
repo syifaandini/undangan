@@ -123,7 +123,7 @@ export default {
       };
       axios(getData)
         .then((response) => {
-          this.messages = response.data;
+          this.messages = response.data.reverse();
         })
         .catch((error) => {
           console.error(error);
@@ -147,7 +147,7 @@ export default {
           };
           axios(getData)
             .then((response) => {
-              this.messages = response.data;
+              this.messages = response.data.reverse();
             })
             .catch((error) => {
               console.error(error);
