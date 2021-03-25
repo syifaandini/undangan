@@ -97,6 +97,11 @@ label,
 .form-control {
   font-size: 1.5rem;
 }
+@media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
+  #tamu .modal-dialog-scrollable .modal-content.basemodal__content {
+    min-width: 94vw;
+  }
+}
 /* Portrait Ipad */
 @media only screen and (min-width: 768px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   #tamu .modal-dialog-scrollable .modal-content.basemodal__content {

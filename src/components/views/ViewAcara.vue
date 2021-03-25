@@ -115,7 +115,6 @@ export default {
       var audio = this.$root.$el.nextElementSibling
       audio.volume = 0.05
       audio.play()
-      console.log(audio)
     },
     opentamu() {
       this.$bvModal.show("tamu");

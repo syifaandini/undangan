@@ -37,21 +37,4 @@ html {
 p {
   font-size: 1.5rem;
 }
-/* .loader{
-  position: fixed;
-  z-index: 150;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader img{
-  width: 10%;
-} */
 </style>

@@ -3,7 +3,8 @@
     <template>
       <h1 class="title-modal text-center mb-0">E-Amplop</h1>
       <p class="text-center">
-        Although you aren’t present at the wedding location, you can also send some loves for Dana & Trisa, digitally.
+        Although you aren’t present at the wedding location, you can also send
+        some loves for Dana & Trisa, digitally.
       </p>
       <b-row>
         <b-col cols="12" md="6">
@@ -41,7 +42,7 @@ export default {
   data() {
     return {
       bca: "6800604883",
-      gopay: "729972378978"
+      gopay: "729972378978",
     };
   },
   methods: {
@@ -99,7 +100,12 @@ export default {
   font-weight: bold;
   letter-spacing: 1px;
 }
-#amplop___BV_modal_content_{
+#amplop___BV_modal_content_ {
   width: 50vw;
+}
+@media only screen and (min-aspect-ratio: 9/20) and (orientation: portrait) {
+  #amplop___BV_modal_content_ {
+    width: 94vmin;
+  }
 }
 </style>
