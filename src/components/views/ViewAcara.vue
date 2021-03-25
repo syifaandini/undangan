@@ -112,17 +112,28 @@ export default {
   methods: {
     closeModal() {
       this.$bvModal.hide("welcome");
-      var audio = this.$root.$el.nextElementSibling
-      audio.volume = 0.05
-      audio.play()
+      var getData = {
+        method: "get",
+        url: "https://weddingdev.arthatronic.com/api/users",
+      };
+      axios(getData)
+        .then((response) => {
+          this.messages = response.data.reverse();
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      this.$bvModal.show("tamu");
+      var audio = this.$root.$el.nextElementSibling;
+      audio.volume = 0.05;
+      audio.play();
     },
     opentamu() {
       this.$bvModal.show("tamu");
 
       var getData = {
         method: "get",
-        url:
-          "https://weddingdev.arthatronic.com/api/users",
+        url: "https://weddingdev.arthatronic.com/api/users",
       };
       axios(getData)
         .then((response) => {
@@ -136,8 +147,7 @@ export default {
       var postData = {
         method: "post",
         data: data,
-        url:
-          "https://weddingdev.arthatronic.com/api/users/ucapan",
+        url: "https://weddingdev.arthatronic.com/api/users/ucapan",
       };
       axios(postData)
         .then((response) => {
@@ -145,8 +155,7 @@ export default {
 
           var getData = {
             method: "get",
-            url:
-              "https://weddingdev.arthatronic.com/api/users",
+            url: "https://weddingdev.arthatronic.com/api/users",
           };
           axios(getData)
             .then((response) => {

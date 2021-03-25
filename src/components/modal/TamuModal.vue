@@ -2,9 +2,8 @@
   <base-modal :idModal="'tamu'" @cleardata="cleardata">
     <template>
       <h1 class="title-modal text-center mb-0">Guestbook</h1>
-      <p>
-        Share your hopes, support, jokes, poems, or any thoughts with us! We'll
-        be glad to hear from you.
+      <p class="text-center">
+        You can give your best wishes to the wedding couple and enter the venue by writing in this guestbook.
       </p>
       <b-row>
         <b-col cols="12" md="6" class="form-wrapper">
