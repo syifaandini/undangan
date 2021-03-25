@@ -119,7 +119,7 @@ export default {
       var getData = {
         method: "get",
         url:
-          "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users",
+          "https://weddingdev.arthatronic.com/api/users",
       };
       axios(getData)
         .then((response) => {
