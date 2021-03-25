@@ -62,7 +62,79 @@
     </div>
 
     <welcome-modal @closeModal="closeModal"></welcome-modal>
-    <tamu-modal @submitData="submitData">
+    <base-modal :idModal="'tamu'" @cleardata="cleardata">
+      <template>
+        <h1 class="title-modal text-center mb-0">Guestbook</h1>
+        <p class="text-center">
+          You can give your best wishes to the wedding couple and enter the
+          venue by writing in this guestbook.
+        </p>
+        <b-row>
+          <b-col cols="12" md="6" class="form-wrapper">
+            <b-form ref="form" @submit.stop.prevent="submitData" class="mt-3">
+              <b-form-group label="Name" label-for="input-1">
+                <b-form-input
+                  id="input-1"
+                  v-model="form.name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  autofocus
+                ></b-form-input>
+              </b-form-group>
+
+              <b-form-group label="Email" label-for="input-1">
+                <b-form-input
+                  id="input-1"
+                  v-model="form.email"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                ></b-form-input>
+              </b-form-group>
+
+              <b-form-group
+                label="Message"
+                label-for="textarea"
+                class="mb-0 textarea-title"
+              >
+                <b-form-textarea
+                  id="textarea"
+                  v-model.trim="form.message"
+                  placeholder="Write your message here..."
+                  size="sm"
+                  cols="10"
+                  required
+                ></b-form-textarea>
+              </b-form-group>
+
+              <div class="btn-wrapper">
+                <b-button
+                  type="submit"
+                  block
+                  class="mt-4 btn-auth btn-auth-primary submit-message"
+                  >Submit</b-button
+                >
+              </div>
+            </b-form>
+          </b-col>
+          <b-col cols="12" md="6" class="d-none d-md-block messages">
+            <div v-for="item in messages" :key="item.id">
+              <p class="mb-0 name">{{ item.name }}</p>
+              <p>{{ item.text }}</p>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" class="mt-4 d-md-none d-sm-block">
+            <div v-for="item in messages" :key="item.id">
+              <p class="mb-0 name">{{ item.name }}</p>
+              <p>{{ item.text }}</p>
+            </div>
+          </b-col>
+        </b-row>
+      </template>
+    </base-modal>
+
+    <!-- <tamu-modal @submitData="submitData">
       <template #response>
         <b-col cols="12" md="6" class="d-none d-md-block messages">
           <div v-for="item in messages" :key="item.id">
@@ -77,10 +149,11 @@
           </div>
         </b-col>
       </template>
-    </tamu-modal>
+    </tamu-modal> -->
     <amplop-modal></amplop-modal>
     <live-modal></live-modal>
     <gallery-modal></gallery-modal>
+    <thank-modal></thank-modal>
 
     <!-- </div> -->
     <transition name="fade" mode="in-out">
@@ -95,21 +168,49 @@
 import AmplopModal from "../modal/AmplopModal.vue";
 import GalleryModal from "../modal/GalleryModal.vue";
 import LiveModal from "../modal/LiveModal.vue";
-import TamuModal from "../modal/TamuModal.vue";
+// import TamuModal from "../modal/TamuModal.vue";
 import WelcomeModal from "../modal/WelcomeModal.vue";
+import BaseModal from "../ui/BaseModal";
 
 import axios from "axios";
+import ThankModal from "../modal/ThankModal.vue";
 
 export default {
-  components: { WelcomeModal, TamuModal, AmplopModal, LiveModal, GalleryModal },
+  components: {
+    WelcomeModal,
+    // TamuModal,
+    AmplopModal,
+    LiveModal,
+    GalleryModal,
+    ThankModal,
+    BaseModal,
+  },
   data() {
     return {
       countdown: true,
       logovisible: true,
       messages: null,
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
     };
   },
   methods: {
+    handleSubmit() {
+      var data = {
+        name: this.form.name,
+        email: this.form.email.toLowerCase(),
+        text: this.form.message,
+      };
+      this.$emit("submitData", data);
+    },
+    cleardata() {
+      this.form.name = "";
+      this.form.email = "";
+      this.form.message = "";
+    },
     closeModal() {
       this.$bvModal.hide("welcome");
       var getData = {
@@ -130,10 +231,6 @@ export default {
     },
     opentamu() {
       this.$bvModal.show("tamu");
-      // var modal = document.getElementById("#tamu")
-      // modal.onclick = function () {
-      //   document.modal.off("resize");
-      // }
       var getData = {
         method: "get",
         url: "https://weddingdev.arthatronic.com/api/users",
@@ -146,7 +243,13 @@ export default {
           console.error(error);
         });
     },
-    submitData(data) {
+    submitData() {
+      var data = {
+        name: this.form.name,
+        email: this.form.email.toLowerCase(),
+        text: this.form.message,
+      };
+
       var postData = {
         method: "post",
         data: data,
@@ -163,6 +266,13 @@ export default {
           axios(getData)
             .then((response) => {
               this.messages = response.data.reverse();
+              this.$bvModal.show("thanks");
+              setTimeout(() => {
+                this.$bvModal.hide("thanks");
+              }, 2000);
+              this.form.name = ""
+              this.form.email = ""
+              this.form.message = ""
             })
             .catch((error) => {
               console.error(error);
