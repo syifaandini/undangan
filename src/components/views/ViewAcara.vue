@@ -270,6 +270,7 @@ export default {
               setTimeout(() => {
                 this.$bvModal.hide("thanks");
               }, 2000);
+              this.$bvModal.hide("tamu");
               this.form.name = ""
               this.form.email = ""
               this.form.message = ""
