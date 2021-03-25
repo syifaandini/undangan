@@ -41,6 +41,7 @@
                 placeholder="Write your message here..."
                 size="sm"
                 cols="10"
+                required
               ></b-form-textarea>
             </b-form-group>
 
