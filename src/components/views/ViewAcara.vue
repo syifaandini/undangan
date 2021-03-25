@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style>
-.interact{
+.interact {
   animation: blinker 1s ease-in-out infinite alternate;
 }
 
@@ -198,6 +198,18 @@ export default {
     background-size: 100% 100%;
     width: 1200px;
     height: 100vh;
+  }
+  .icon5 {
+    top: 76%;
+    left: 56%;
+  }
+  .icon7 {
+    top: 67%;
+    right: 48%;
+  }
+  .icon8 {
+    top: 72%;
+    right: 70%;
   }
 }
 @media only screen and (min-width: 768px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
