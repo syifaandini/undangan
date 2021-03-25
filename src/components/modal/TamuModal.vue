@@ -54,18 +54,7 @@
             </div>
           </b-form>
         </b-col>
-        <b-col cols="12" md="6" class="d-none d-md-block messages">
-          <div v-for="item in messages" :key="item.id">
-            <p class="mb-0 name">{{ item.name }}</p>
-            <p>{{ item.message }}</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="6" class="mt-4 d-md-none d-sm-block">
-          <div v-for="item in messages" :key="item.id">
-            <p class="mb-0 name">{{ item.name }}</p>
-            <p>{{ item.message }}</p>
-          </div>
-        </b-col>
+        <slot name="response"></slot>
       </b-row>
     </template>
   </base-modal>
@@ -82,28 +71,18 @@ export default {
         email: "",
         message: "",
       },
-      messages: [
-        {
-          id: 1,
-          name: "Nama",
-          message:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-        },
-        {
-          id: 2,
-          name: "Nama2",
-          message:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-        },
-        {
-          id: 3,
-          name: "Nama3",
-          message:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-        },
-      ],
     };
   },
+  methods: {
+    handleSubmit() {
+    var data = {
+      name: this.form.name,
+      email: this.form.email.toLowerCase(),
+      text: this.form.message,
+    };
+    this.$emit('submitData', data)
+  },
+  }
 };
 </script>
 
@@ -123,13 +102,6 @@ label,
 </style>
 
 <style scoped>
-.messages {
-  max-height: 65vh;
-  overflow: auto;
-}
-.name {
-  font-weight: bolder;
-}
 .submit-message {
   border-radius: 15px;
   box-shadow: 0px 3px 6px #00000029;

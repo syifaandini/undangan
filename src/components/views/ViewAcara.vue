@@ -11,7 +11,7 @@
         src="../../assets/icon/guestbook.png"
         alt="guest book"
         class="interact icon1"
-        v-b-modal.tamu
+        @click="opentamu"
       />
       <img
         src="../../assets/icon/amplop.png"
@@ -25,7 +25,10 @@
         class="interact icon3"
         v-b-modal.gallery
       />
-      <a href="https://www.instagram.com/p/CHhlSvZDDY4/?igshid=1pg0humv5l4xn" target="_blank">
+      <a
+        href="https://www.instagram.com/p/CHhlSvZDDY4/?igshid=1pg0humv5l4xn"
+        target="_blank"
+      >
         <img
           src="../../assets/icon/flyn.png"
           alt="flyn freshener"
@@ -59,7 +62,22 @@
     </div>
 
     <welcome-modal @closeModal="closeModal"></welcome-modal>
-    <tamu-modal></tamu-modal>
+    <tamu-modal @submitData="submitData">
+      <template #response>
+        <b-col cols="12" md="6" class="d-none d-md-block messages">
+          <div v-for="item in messages" :key="item.id">
+            <p class="mb-0 name">{{ item.name }}</p>
+            <p>{{ item.text }}</p>
+          </div>
+        </b-col>
+        <b-col cols="12" md="6" class="mt-4 d-md-none d-sm-block">
+          <div v-for="item in messages" :key="item.id">
+            <p class="mb-0 name">{{ item.name }}</p>
+            <p>{{ item.text }}</p>
+          </div>
+        </b-col>
+      </template>
+    </tamu-modal>
     <amplop-modal></amplop-modal>
     <live-modal></live-modal>
     <gallery-modal></gallery-modal>
@@ -80,17 +98,84 @@ import LiveModal from "../modal/LiveModal.vue";
 import TamuModal from "../modal/TamuModal.vue";
 import WelcomeModal from "../modal/WelcomeModal.vue";
 
+import axios from "axios";
+
 export default {
   components: { WelcomeModal, TamuModal, AmplopModal, LiveModal, GalleryModal },
   data() {
     return {
       countdown: true,
       logovisible: true,
+      messages: null,
+      // messages: [
+      //   {
+      //     id: 1,
+      //     name: "Nama",
+      //     message:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
+      //   },
+      //   {
+      //     id: 2,
+      //     name: "Nama2",
+      //     message:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
+      //   },
+      //   {
+      //     id: 3,
+      //     name: "Nama3",
+      //     message:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
+      //   },
+      // ],
     };
   },
   methods: {
     closeModal() {
       this.$bvModal.hide("welcome");
+    },
+    opentamu() {
+      this.$bvModal.show("tamu");
+
+      var getData = {
+        method: "get",
+        url:
+          "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users",
+      };
+      axios(getData)
+        .then((response) => {
+          this.messages = response.data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+    submitData(data) {
+      var postData = {
+        method: "post",
+        data: data,
+        url:
+          "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users/ucapan",
+      };
+      axios(postData)
+        .then((response) => {
+          console.log(response);
+
+          var getData = {
+            method: "get",
+            url:
+              "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users",
+          };
+          axios(getData)
+            .then((response) => {
+              this.messages = response.data;
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     },
   },
   mounted() {
@@ -112,6 +197,13 @@ export default {
 </script>
 
 <style>
+.messages {
+  max-height: 65vh;
+  overflow: auto;
+}
+.name {
+  font-weight: bolder;
+}
 .interact {
   animation: blinker 1s ease-in-out infinite alternate;
 }
@@ -156,6 +248,7 @@ export default {
   position: absolute;
   z-index: 10;
   width: 5%;
+  cursor: pointer;
 }
 .interact:focus {
   outline: none;
