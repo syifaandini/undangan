@@ -10,7 +10,7 @@
           <a href="https://instagram.com/kyriz_boogieman" target="_blank">
             <div class="instagram-wrapper">
               <img
-                src="../../assets/instagram.png"
+                src="../../assets/icon/dana.png"
                 alt="instagram"
                 class="instagram-icon"
               />
@@ -22,7 +22,7 @@
           <a href="https://instagram.com/fangtatis" target="_blank">
             <div class="instagram-wrapper">
               <img
-                src="../../assets/instagram.png"
+                src="../../assets/icon/tatis.png"
                 alt="instagram"
                 class="instagram-icon"
               />
