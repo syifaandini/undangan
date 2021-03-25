@@ -9,6 +9,7 @@
     body-class="basemodal__body"
     content-class="basemodal__content"
     modal-class="customscroll__basemodal"
+    @hidden="$emit('cleardata')"
   >
     <template #modal-header="{ close }">
       <img

@@ -1,5 +1,5 @@
 <template>
-  <base-modal :idModal="'tamu'">
+  <base-modal :idModal="'tamu'" @cleardata="cleardata">
     <template>
       <h1 class="title-modal text-center mb-0">Guestbook</h1>
       <p>
@@ -75,14 +75,19 @@ export default {
   },
   methods: {
     handleSubmit() {
-    var data = {
-      name: this.form.name,
-      email: this.form.email.toLowerCase(),
-      text: this.form.message,
-    };
-    this.$emit('submitData', data)
+      var data = {
+        name: this.form.name,
+        email: this.form.email.toLowerCase(),
+        text: this.form.message,
+      };
+      this.$emit("submitData", data);
+    },
+    cleardata() {
+      this.form.name = ""
+      this.form.email = ""
+      this.form.message = ""
+    }
   },
-  }
 };
 </script>
 
