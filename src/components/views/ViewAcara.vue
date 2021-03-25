@@ -107,26 +107,6 @@ export default {
       countdown: true,
       logovisible: true,
       messages: null,
-      // messages: [
-      //   {
-      //     id: 1,
-      //     name: "Nama",
-      //     message:
-      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-      //   },
-      //   {
-      //     id: 2,
-      //     name: "Nama2",
-      //     message:
-      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-      //   },
-      //   {
-      //     id: 3,
-      //     name: "Nama3",
-      //     message:
-      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis ipsum aut alias fuga cupiditate at iusto molestias quo non, fugiat cumque nihil inventore aliquam hic dolores accusantium sunt eius",
-      //   },
-      // ],
     };
   },
   methods: {
@@ -154,7 +134,7 @@ export default {
         method: "post",
         data: data,
         url:
-          "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users/ucapan",
+          "https://weddingdev.arthatronic.com/api/users/ucapan",
       };
       axios(postData)
         .then((response) => {
@@ -163,7 +143,7 @@ export default {
           var getData = {
             method: "get",
             url:
-              "http://ec2-54-255-206-117.ap-southeast-1.compute.amazonaws.com:3000/api/users",
+              "https://weddingdev.arthatronic.com/api/users",
           };
           axios(getData)
             .then((response) => {
@@ -179,7 +159,6 @@ export default {
     },
   },
   mounted() {
-    console.log("hehe");
     console.log(this.logovisible);
     setTimeout(() => {
       this.logovisible = false;
@@ -188,11 +167,6 @@ export default {
       this.$bvModal.show("welcome");
     }, 3750);
   },
-  // created() {
-  //   setTimeout(() => {
-  //     this.logovisible = true;
-  //   }, 1000);
-  // },
 };
 </script>
 

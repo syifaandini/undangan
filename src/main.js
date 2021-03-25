@@ -22,6 +22,16 @@ import VueCountdownTimer from 'vuejs-countdown-timer';
 
 Vue.config.productionTip = false
 
+// var loading = document.getElementById("loading")
+// var acara = document.getElementById("app")
+
+// window.addEventListener("load", showPage);
+
+// function showPage() {
+//   loading.style.display="none"
+//   acara.style.display="block"
+// }
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
