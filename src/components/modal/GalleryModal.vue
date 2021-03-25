@@ -41,29 +41,27 @@
         </div>
       </div> -->
       <section id="photos">
-        <img src="../../assets/photos/1.jpg" alt="foto" v-b-modal.image1 />
-        <img src="../../assets/photos/2.jpg" alt="foto" v-b-modal.image2 />
-        <img src="../../assets/photos/3.jpg" alt="foto" v-b-modal.image3 />
-        <img src="../../assets/photos/4.jpg" alt="foto" v-b-modal.image4 />
-        <img src="../../assets/photos/2.jpg" alt="foto" v-b-modal.image2 />
-        <img src="../../assets/photos/3.jpg" alt="foto" v-b-modal.image3 />
-        <img src="../../assets/photos/4.jpg" alt="foto" v-b-modal.image4 />
-        <img src="../../assets/photos/2.jpg" alt="foto" v-b-modal.image2 />
-        <img src="../../assets/photos/1.jpg" alt="foto" v-b-modal.image1 />
-        <img src="../../assets/photos/4.jpg" alt="foto" v-b-modal.image4 />
+        <img src="../../assets/photos/1.jpeg" alt="foto" v-b-modal.image1 />
+        <img src="../../assets/photos/2.jpeg" alt="foto" v-b-modal.image2 />
+        <img src="../../assets/photos/3.jpeg" alt="foto" v-b-modal.image3 />
+        <img src="../../assets/photos/4.jpeg" alt="foto" v-b-modal.image4 />
+        <img src="../../assets/photos/5.jpeg" alt="foto" v-b-modal.image2 />
+        <img src="../../assets/photos/6.jpeg" alt="foto" v-b-modal.image3 />
+        <img src="../../assets/photos/7.jpeg" alt="foto" v-b-modal.image4 />
+        <img src="../../assets/photos/8.jpeg" alt="foto" v-b-modal.image2 />
       </section>
 
       <image-modal idModal="image1">
-        <img src="../../assets/photos/1.jpg" style="width: 100%" />
+        <img src="../../assets/photos/1.jpeg" style="width: 100%" />
       </image-modal>
       <image-modal idModal="image2">
-        <img src="../../assets/photos/2.jpg" style="width: 100%" />
+        <img src="../../assets/photos/2.jpeg" style="width: 100%" />
       </image-modal>
       <image-modal idModal="image3">
-        <img src="../../assets/photos/3.jpg" style="width: 100%" />
+        <img src="../../assets/photos/3.jpeg" style="width: 100%" />
       </image-modal>
       <image-modal idModal="image4">
-        <img src="../../assets/photos/4.jpg" style="width: 100%" />
+        <img src="../../assets/photos/4.jpeg" style="width: 100%" />
       </image-modal>
       <!-- <b-row>
         <b-col cols="12" md="6">

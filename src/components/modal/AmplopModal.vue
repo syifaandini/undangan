@@ -8,31 +8,26 @@
         blanditiis
       </p>
       <b-row>
-        <b-col cols="12" md="4">
-          <div class="qrcode-wrapper" @click.stop.prevent="copyTestingCode">
-            <img src="../../assets/qrcode/bca.png" alt="bca" class="qrcode" />
-            <p>Rekening ABC</p>
-            <p id="code1">{{ test }}</p>
-            <p>a.n Fulan</p>
+        <b-col cols="12" md="6">
+          <div class="qrcode-wrapper" @click.stop.prevent="copyBca">
+            <img src="../../assets/qrcode/bca.jpg" alt="bca" class="qrcode" />
+            <p>Rekening BCA</p>
+            <p id="code1">{{ bca }}</p>
+            <p>a.n Pradana Rizky Wardhana</p>
             <div style="opacity: 0">
               <input type="text" id="copyText" />
             </div>
           </div>
         </b-col>
-        <b-col cols="12" md="4">
-          <div class="qrcode-wrapper">
-            <img src="../../assets/qrcode/bca.png" alt="bca" class="qrcode" />
-            <p>Rekening ABC</p>
-            <p id="code2">12345678</p>
-            <p>a.n Fulan</p>
-          </div>
-        </b-col>
-        <b-col cols="12" md="4">
-          <div class="qrcode-wrapper">
-            <img src="../../assets/qrcode/bca.png" alt="bca" class="qrcode" />
-            <p>Rekening ABC</p>
-            <p id="code3">12345678</p>
-            <p>a.n Fulan</p>
+        <b-col cols="12" md="6">
+          <div class="qrcode-wrapper" @click.stop.prevent="copyGopay">
+            <img src="../../assets/qrcode/gopay.jpg" alt="bca" class="qrcode" />
+            <p>Gopay</p>
+            <p id="code2">{{ gopay }}</p>
+            <p>a.n Dana Rizky</p>
+            <div style="opacity: 0">
+              <input type="text" id="copyText2" />
+            </div>
           </div>
         </b-col>
       </b-row>
@@ -42,21 +37,17 @@
 
 <script>
 import BaseModal from "../ui/BaseModal";
-// function copy() {
-//   var copyText = document.querySelector("#code1");
-//   copyText.select();
-//   document.execCommand("copy");
-// }
 
 export default {
   components: { BaseModal },
   data() {
     return {
-      test: "123456",
+      bca: "6800604883",
+      gopay: "0813"
     };
   },
   methods: {
-    copyTestingCode() {
+    copyBca() {
       var p1 = document.getElementById("code1");
 
       // set "#Color 1" with the hidden field so that you can call select on it
@@ -65,7 +56,18 @@ export default {
       hiddenField.select();
       document.execCommand("copy");
 
-      alert("Copied the text: " + hiddenField.value);
+      alert("Copied rekening: " + hiddenField.value);
+    },
+    copyGopay() {
+      var p2 = document.getElementById("code2");
+
+      // set "#Color 1" with the hidden field so that you can call select on it
+      var hiddenField = document.getElementById("copyText2");
+      hiddenField.value = p2.innerHTML;
+      hiddenField.select();
+      document.execCommand("copy");
+
+      alert("Copied gopay number: " + hiddenField.value);
     },
   },
 };
@@ -84,7 +86,7 @@ export default {
 }
 .qrcode-wrapper img {
   margin: 20px 10px;
-  width: 80%;
+  width: 66%;
 }
 .qrcode-wrapper p {
   margin-bottom: 0;
@@ -98,5 +100,8 @@ export default {
   font-size: 3.5rem;
   font-weight: bold;
   letter-spacing: 1px;
+}
+#amplop___BV_modal_content_{
+  width: 50vw;
 }
 </style>
