@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       bca: "6800604883",
-      gopay: "729972378978",
+      gopay: "081380860094",
     };
   },
   methods: {
