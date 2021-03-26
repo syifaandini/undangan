@@ -156,11 +156,11 @@
     <thank-modal></thank-modal>
 
     <!-- </div> -->
-    <transition name="fade" mode="in-out">
+    <!-- <transition name="fade" mode="in-out">
       <div v-show="logovisible" class="bg-logo">
         <img class="logo" src="../../assets/logo.png" alt="logo" />
       </div>
-    </transition>
+    </transition> -->
   </div>
 </template>
 
@@ -285,12 +285,12 @@ export default {
     },
   },
   mounted() {
-    setTimeout(() => {
-      this.logovisible = false;
-    }, 3000);
-    setTimeout(() => {
+    // setTimeout(() => {
+    //   this.logovisible = false;
+    // }, 3000);
+    // setTimeout(() => {
       this.$bvModal.show("welcome");
-    }, 3750);
+    // }, 3750);
   },
 };
 </script>
