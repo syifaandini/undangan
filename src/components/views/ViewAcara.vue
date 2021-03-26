@@ -284,7 +284,7 @@ export default {
         });
     },
   },
-  mounted() {
+  created() {
     // setTimeout(() => {
     //   this.logovisible = false;
     // }, 3000);
